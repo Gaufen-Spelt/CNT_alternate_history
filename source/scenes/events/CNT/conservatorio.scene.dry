@@ -40,16 +40,35 @@ The workers gave decided that we shall stress our commitment to anti-parliamenta
 
 @point two
 
-The next point in the agenda that stirred the delegates concerns another proposal by the National Committee. This time it is about an idea for a restructuring  ofthe Confederation. 
-The current structure has been, ever since the CNT's creration, oriented towards the local organisations where all workers and professional unions are united. A union in Barcelona sends delegate to the Catalonian union plenum where, after deliberations, delegates are sent to the Natioanl Congress.
-The new proposal of concurent National Industrial Federations suggests that we organize a concrent union structure around professional lines where, for example, all coal miners' unions in Oviedo will convene together and then send their delegates to the regional plenum of their professional unions and so on.
+The next point in the agenda that stirred the delegates concerns another proposal by the National Committee. This time it is about an idea for a restructuring  of the Confederation. 
+The current structure has been, ever since the CNT's creation, oriented towards the local organisations where all workers and professional unions are united in a single regional entity. A union in Barcelona sends delegate to the Catalonian union plenum where, after deliberations, delegates are sent to the Natioanl Congress.
+The new proposal of adopting the National Industrial Federations model suggests that we organize a concurent union structure around professional lines where, for example, all coal miners' unions in Oviedo will convene together and then send their delegates to the regional plenum of their professional unions and so on.
 
-Supporters of this motion say that the current structure was the product of its time as Spain was less industrialized at the time of the CNT's inception and there were also many unnecessary and unwinable strikes. Now however we must adapt ourselves and adopt this new idea as it will make strike and direct action coordination way easier - rather than regional coordination, it would require workers of the industry only to organize and will ease the communication with the National Committee as it have the final vote on the need for strike.
-Its opponents warn of its clearly centralist tendencies, as this way the autonomous central unit of the CNT - the Sindicato Unico (the One Union) - shall lose its power and significance and lead to more centralized control and even more bureaucracy. They speak the we are not Marxists and need not enslave oursleves to economical factors. We need free communes, not the perfect tool to create a free world.
+Supporters of this motion say that the current structure was the product of its time as Spain was less industrialized at the time of the CNT's inception and there were also many unnecessary and unwinable strikes due to individual unions'decisions. Now however we must adapt ourselves and adopt this new idea as it will make strike and direct action coordination way easier - rather than regional coordination, it would require workers of the industry only to organize and will ease the communication with the National Committee as it will have the final vote on the need for strike.
+Its opponents warn of its clearly centralist tendencies, as this way the autonomous central unit of the CNT - the Sindicato Unico (the One Union) - shall lose its power and significance and lead to more centralized control from the National Committee and even more bureaucracy to solidify it. They speak the we are not Marxists and need not enslave ourselves to economical factors. We need free communes, not administration to create a free world.
 
-The tension is hot and in the deliberations many insults are hurled - it seems that unity in the CNT may not be possible.
+The tension is hot and in the deliberations many personal insults are hurled - it seems that unity in the CNT may not be possible.
 Many comrades are still on the fence, though it seems that the proposition for National Indutrial Federations was well accepted by the delegates, even some anarchists like Diego Abad de Santillan seem to be in favor. What ultimately is the Congress'decision?
 
--@
+-@for
+-@against
+
+@for
+subtitle: The new structural change is accepted!
+on-arrival: reform_points += 1; revolutionary_dissent += 10; NIF += 1; intellectual_dissent -= 10
+go-to: finale
+
+The proposal is accepted! The implementation of the change however depends on the will of the National Committee and its members...
+
+@for
+subtitle: The new structural change is accepted!
+on-arrival: revolut_points += 1; reformist_dissent += 10; intellectual_dissent += 10
+go-to: finale
+
+The proposal has surprisingly failed! The Confederation will keep its original structure, it seems.
+
+@finale
+on-arrival: revolut_points += 1; reformist_dissent += 10; intellectual_dissent += 10
+
 
 

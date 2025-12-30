@@ -24,7 +24,7 @@ What is the will of the unions?
 
 @pro
 subtitle: Let us discuss the Cortes and our demands. 
-on-arrival: reform_points += 1; reformist_strength += 10; radicalization -= 1; thirty -= 1; ar_relation += 5; psoe_relation += 5; esq_relation += 5;
+on-arrival: reform_points += 2; reformist_strength += 10; radicalization -= 1; thirty -= 1; ar_relation += 5; psoe_relation += 5; esq_relation += 5;
 go-to: point_two
 
 The delegates have barely approved a proposal to influence the radical parties in the Cortes. Let the voice of the workers be heard, we can play at revolution later!
@@ -55,7 +55,7 @@ Many comrades are still on the fence, though it seems that the proposition for N
 
 @for
 subtitle: The new structural change is accepted!
-on-arrival: reform_points += 1; revolutionary_dissent += 5; NIF += 1; intellectual_dissent -= 5
+on-arrival: reform_points += 2; revolutionary_dissent += 5; NIF += 1; intellectual_dissent -= 5
 go-to: finale
 
 The proposal is accepted! The implementation of the change however depends on the will of the National Committee and its members...
@@ -70,5 +70,9 @@ The proposal has surprisingly failed! The Confederation will keep its original s
 @finale
 on-arrival: if revolut_points == 5, revolutionary_strength += 25 and reformist_dissent += 15; if revolut_points == 4, revolutionary_strength += 20; if revolut_points == 3, revolutionary_strength += 15; if revolut_points == 2, revolutionary_strength += 10 and revolutionary_dissent += 5; if revolut_points == 1, revolutionary_strength += 5 and revolutionary_dissent += 10; if reform_points == 5, reformist_strength += 25 and revolutionary_dissent += 15; if reform_points == 4, reformist_strength += 20; if reform_points == 3, reformist_strength += 15; if reform_points == 2, reformist_strength += 10 and reformist_dissent += 5; if reform_points == 1, reformist_strength += 5 and reformist_dissent += 10; 
 
-The
+The Congress proceeded in the same spirit of contentousness along the rest of the agenda. It is clear that the cracks in the CNT are enormous and if a Congress couldn't resolve them, surely the next months will be very interesting for the Confederation.
+
+[? if reform_points > 5 : The National Committee of the Reformists have kept their influence, though at some cost. Now is the revolutionary anarchists' turn, though nothing good will come of these hotheads' actions! ?]
+
+[? if revolut_points > 5 : The National Committee, is seems, has lost its infulence among the delegates. They still have some loyalists left in the Levante and Catalonia, but the next actions they take will be marked by desperation. ?]
 

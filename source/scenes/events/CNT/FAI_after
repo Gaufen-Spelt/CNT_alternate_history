@@ -1,0 +1,9 @@
+title: The Aftermath - FAI
+subtitle: The FAI congress convenes...
+view-if: year = 1931 and month = 6 and forthnight = 2
+priority: -1
+max-visits: 1
+tags: event
+new-page: true
+
+= The Coservatorio Congress

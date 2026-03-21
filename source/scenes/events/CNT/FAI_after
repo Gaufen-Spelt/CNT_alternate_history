@@ -6,4 +6,18 @@ max-visits: 1
 tags: event
 new-page: true
 
-= The Coservatorio Congress
+= The FAI Congress of 1931 
+
+While the CNT convenved, so did the FAI gather to decide its position under the new regime.
+Despite fierce opposition from some of the more moderate members of the Federation, like Joan Peiro, the revolutionary members prevailed. The moderate members of the Peninsular Committee were ousted and a new radical committee was voted in.
+
+[? if reformist_strength = 45 : There were also some voices in the Congress who denounced the "reformist" tendencies of the CNT and even expressed doubts about any further dealings. The Trabazon was called a "dictate" which an honest anarchist would never give in to. ?]
+[? if revolutionary_strength = 40 : Despite the revolutionary surge in the CNT there were some doubts about the Confederation's convictions to the revolutionary cause. ?]
+
+- @interesting
+
+@interesting
+title: This will cause some ripples
+subtitle: Only time will tell if the Trabazon will survive.
+on-arrival: if revolutionary_strength >= 30, fai_ties += 1; if reformist_strength >= 35, fai_ties -= 1;
+The alliance is more fragile than ever. The coming weeks will be fateful to the survival of both organisations.

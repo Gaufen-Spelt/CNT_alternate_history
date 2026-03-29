@@ -1,6 +1,6 @@
 title: Counterarguments
 subtitle: The culmination of the confrontation
-view-if: year = 1931 and month = 9 and forthnight = 1
+view-if: year = 1931 and month = 9 and forthnight = 2
 priority: -1
 max-visits: 1
 tags: event

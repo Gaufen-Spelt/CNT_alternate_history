@@ -19,8 +19,7 @@ title: Rally for pacifism.
 subtitle: Campaign for internationalism and against militarism.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6;
-go-to: rally.pacifism
+on-arrival: advisor_action_timer = 6; pacifism += 1
 
 
 @curriculum_

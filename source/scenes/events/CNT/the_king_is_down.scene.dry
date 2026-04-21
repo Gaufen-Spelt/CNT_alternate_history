@@ -19,6 +19,6 @@ tags: event
 @interesting
 title: Intriguing course of events.
 subtitle: We need some time to adjust to the events.
-on-arrival: in_election += 1; next_election_month == 6; next_election_forthnight == 2; next_election_timer == 4; pm == "Alcala-Zamora"; pm_party == "DLR"; president == "none"; 
+on-arrival: in_election += 1; next_election_month = 6; next_election_forthnight = 2; next_election_timer = 4; pm = "Alcala-Zamora"; pm_party = "DLR"; president = "none"; 
 
 We shall soon have to decide how to react to these new circumstances. Meanwhile, let us welcome our imprisoned and exiled comrades with open arms back into the fold!

@@ -13,9 +13,9 @@ The more radical anarchists in the CNT were outraged by the moderacy and perceiv
 In a scandalous, but not surprising turn of events, Solidaridad Obrera's editorial staff has pledged their support publicly to the treintistas. Hardly surprising, given the fact that some of the treintistas are part of that staff and of the National Committee. However, that move has angered the revolutionaries even more and threatens to split the Confederation completely.
 How will the members of the Confederation react towards this last drop?
 
-- @Unity
-- @Reform
-- @Revolut
+- @Unity: Unity be it
+- @Reform: Reform be it
+- @Revolut: Revolution be it
 
 @Unity
 view-if: revolut_points <= 9 and reform_points <= 9 and unionist_strength >= 30

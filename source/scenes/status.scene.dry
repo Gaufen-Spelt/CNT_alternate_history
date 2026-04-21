@@ -52,12 +52,12 @@ Cortes composition:
 # 1931: 6,17, 1933: 4
 {!<span class="tooltip-text" title="Republican Left of Catalonia">ESC</span>!}: [+ esq_r +]%
 # 1931: 5,55, 1933: 5
-{!<span class="tooltip-text" title="Action Republicana">!}[? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]{!</span>!}: [+ ar_r +]%
+{!<span class="tooltip-text" title="Action Republicana">!}[? if ar_name = 0 : AR ?][? if ar_name != 0 : [+ ar_name +] ?]{!</span>!}: [+ ar_r +]%
 [? if ir_formed > 0 : IR: [+ ir_r +]% ?]
 # 1931: 5,32, 1933: 7
 {!<span class="tooltip-text" title="Liberal Republican Right">DLR</span>!}: [+ dlr_r +]%
 # 1931: 3, 1933: 5
-{!<span class="tooltip-text" title="Action Popular">!}[? if ap_name = 0 : AP ?][? if ap_name <> 0 : [+ ap_name +] ?]{!</span>!}: [+ ceda_r +]%
+{!<span class="tooltip-text" title="Action Popular">!}[? if ap_name = 0 : AP ?][? if ap_name != 0 : [+ ap_name +] ?]{!</span>!}: [+ ceda_r +]%
 # 1931: 7,15, 1933: 18
 {!<span class="tooltip-text" title="Ethnic Parties">EP</span>!}: [+ ep_r +]%
 # 1931: 2,2, 1933: 18

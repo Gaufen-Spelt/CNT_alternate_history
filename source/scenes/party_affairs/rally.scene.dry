@@ -17,7 +17,7 @@ A rally is not only a demonstration in the struggle for rights, it also rallies 
 - @asturias: We rally in Oviedo, in Asturias!
 - @madrid: We rally in Madrid, in the capital!
 - @zaragoza: We rally in Zaragoza, in Aragon!
-- @cancel: It's not the right time.
+- @root: It's not the right time.
 
 @barcelona
 on-arrival: barcelona += 1 if esc_in_government == 1, esc_relation -= 5; if esc_in_government == 0, esc_relation += 5;
@@ -39,7 +39,7 @@ go-to:main_rally
 on-arrival: madrid += 1; ar_relation -= 5 if ar_in_government == 1; ir_relation -= 5 if ir_formed > 0 and ir_in_government == 1; psoe_relation += 5 if psoe_in_government == 0
 go-to:main_rally
 
-@zaragoza:
+@zaragoza
 on-arrival: zaragoza += 1; 
 go-to: main_rally
 

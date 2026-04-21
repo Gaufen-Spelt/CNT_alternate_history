@@ -21,7 +21,7 @@ The Federation of Anarchists of Iberia (FAI) is the loosely organised net of ana
 @insurrection
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources.
-view-if: revolutionary_strength >= 45 and ins_support >= 3;
+view-if: revolutionary_strength >= 45 and ins_support >= 3
 choose-if: resources >= 2
 on-arrival: resources -= 2; insur_support += 1; fai_ties += 10; ins_res += 1;
 
@@ -30,7 +30,7 @@ We have decided to cooperate with the rest of the anarchists towards a revolutio
 @discussions
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources.
-view-if: intellectual;_strength >= 45 and centralization_support >= 2;
+view-if: intellectual;_strength >= 45 and centralization_support >= 2
 choose-if: resources >= 2
 on-arrival: resources -= 2; centralization_support += 1; fai_ties += 5; centralist_support += 1;
 
@@ -39,7 +39,7 @@ We have decided to host discussions in the big cities where leading anarchist th
 @union
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources.
-view-if: union;_strength >= 35 and reformist_support >= 30;
+view-if: union;_strength >= 35 and reformist_support >= 30
 choose-if: resources >= 2
 on-arrival: resources -= 2; moderate_plan_support += 1; fai_ties += 5; decentralist_support += 1;
 

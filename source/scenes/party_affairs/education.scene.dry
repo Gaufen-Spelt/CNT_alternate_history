@@ -53,7 +53,7 @@ on-arrival: rural_influence += 2; rural_influence -= 1 if expropriation == 0; re
 
 We have increased our education efforts among the landless rural workers. [? if expropriation == 0 and reformist_strength >=59: Since we have moderated our rhetoric and abandoned illegalist action, the rural workers no longer trust us. ?][? if expropriation == 1: As we support their fight for land and freedom, the rural communities are more receptive to our education efforts. ?]
 
-@catholic
+@catholics
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.

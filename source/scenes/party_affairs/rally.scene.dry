@@ -56,7 +56,7 @@ What shall we rally about? Which aspect of our struggle deserves the most attent
 - @easy_discard
 
 @violence
-choose-if: ins_support >= 4;
+choose-if: ins_support >= 4
 unavailable-subtitle: We are not ready for a violent riot yet and the situation does not demand it.
 on-arrival: political_urgency += 1; cnt_attraction += 3; anarchism += 1; cnt_militancy += 0.1 if revolutionary_strength >= 50; if psoe_in_government == 1, psoe_relation -= 5; ir_relation -= 5;  esc_relation -= 5; revolutionary_strength += 5; revolutionary_dissent -= 5; nationalism += 3; if psoe_in_government == 1, socialism += 3;
 
@@ -70,15 +70,15 @@ on-arrival: cnt_attraction += 2; cnt_attraction += 1 if socialism >= 50; anarchi
 Workers resonate with our radical rhetoric of class war and workers's unity. [? if anarchism > 50 : The mass appeal of socialist ideas makes the working class more receptive to our message. ?]  [? if nationalism > 50 : The mass appeal of nationalist ideas makes the people somewhat hate us more. ?] 
 
 @antifa
-choose-if: popular_front >= 0 and fascist_urgency >= 3;
-view-if: nationalism >= 60;
+choose-if: popular_front >= 0 and fascist_urgency >= 3
+view-if: nationalism >= 60
 unavailable-subtitle: As troubling as the rightist rising is, there are more important battles ahead of us.
 on-arrival: cnt_attraction += 1; psoe_relation += 5; ir_relation += 5; esc_relation += 5; fascist_urgency += 2; cnt_millitancy += 0.2; radicalization += 1; fai_ties += 1; bs_millitancy += 0.1;
 
 We have learned from the German and Italian experience and we know that only the united strength of the working class will not let them pass!
 
 @support
-choose-if: reformist_strength >= 45;
+choose-if: reformist_strength >= 45
 view-if: popular_front >= 0;
 unavailable-subtitle: Why would we support those who persecute us and put us in the same jail as the reactionaries themselves would?
 on-arrival: cnt_attraction += 2; socialism += 1; psoe_relation += 5; ir_relation += 5; esc_relation += 10; cpe_relation += 5; fascist_urgency += 1; cnt_millitancy += 0.1;  psoe_relation += 10 if reformist_plan == 1; fascist_urgency += 1; 

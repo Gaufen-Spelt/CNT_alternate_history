@@ -60,7 +60,7 @@ go-to: finale
 
 The proposal is accepted! The implementation of the change however depends on the will of the National Committee and its members...
 
-@for
+@against
 subtitle: The new structural change is accepted!
 on-arrival: revolut_points += 1; reformist_dissent += 5; intellectual_dissent += 5
 go-to: finale

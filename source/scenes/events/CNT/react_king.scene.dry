@@ -1,7 +1,7 @@
 title: Aftermath of the Birth of Republic
 subtitle: How shall we react to the unfolding events?
 view-if: year = 1931 and month = 4 and fortnight = 2
-on-arrival: president_catalonia == "Macia"; strike -= 1
+on-arrival: president_catalonia = "Macia"; strike -= 1
 new-page: true
 max-visits: 1
 face-image: img/portraits/SchleicherKurt.jpg

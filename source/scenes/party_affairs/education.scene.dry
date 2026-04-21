@@ -41,7 +41,7 @@ We have increased our efforts to educate the middle class, but it will be hard. 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_influence += 1; resources -= 1; anarchism -= 3 if nationalism >= 51 and expropriation == 1 and anarchism =< 35; ruralmiddle_cnt += 6*(1-dissent) if expropriation == 0 and if reformist_strength >=59 ; reformist_strength += 10
+on-arrival: rural_influence += 1; resources -= 1; anarchism -= 3 if nationalism >= 51 and expropriation == 1 and anarchism <= 35; ruralmiddle_cnt += 6*(1-dissent) if expropriation == 0 and if reformist_strength >= 59 ; reformist_strength += 10
 
 We have tried to appeal to the rural middle class. [? if nationalism >= 51 and expropriation == 1: Our direct action against the rural owners make our efforts extremely difficult. ?] [? if expropriation == 0: As we pose no threat to the status quo, we have an easier time increasing support among the rural middle class than before. ?]
 

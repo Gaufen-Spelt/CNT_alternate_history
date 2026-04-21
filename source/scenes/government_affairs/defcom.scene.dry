@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 tags: fai_affairs
 on-arrival: defcom_timer += 6; forthnight_actions += 1
-view-if: fai_ties >= 0;
+view-if: fai_ties >= 0
 card-image: img/portraits/LeberJulius.jpg
 #subtitle: Gather the Defence Committee of the CNT and the FAI
 

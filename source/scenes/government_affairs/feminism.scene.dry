@@ -2,7 +2,7 @@ title: Feminism and Anarchism
 new-page: true
 is-card: true
 on-arrival: feminism_and_anarchism_timer += 6; fortnight_actions += 1
-view-if: fai_ties >= 6 and 1934 == 1 and feminism_and_anarchism_timer = 0 and 
+view-if: fai_ties >= 6 and year = 1934 and feminism_and_anarchism_timer = 0
 card-image: img/portraits/BaadeFritz.jpg
 max-visits: 1
 #subtitle: Relations between anarchism and feminsim

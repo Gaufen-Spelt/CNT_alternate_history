@@ -33,7 +33,7 @@ We have increased our efforts to educate among the workers. [? if centralist_ado
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: cnt_attraction += 2  if moderate_plan_adopted == 1; cnt_attraction -= 4 if reformist_left == 1; resources -= 1; and nationalism -= 3 if reformist_strength >=59; 
+on-arrival: cnt_attraction += 2 if moderate_plan_adopted == 1; cnt_attraction -= 4 if reformist_left == 1; resources -= 1; nationalism -= 3 if reformist_strength >= 59
 
 We have increased our efforts to educate the middle class, but it will be hard. [? if anarchism <= 49 and reformist_left == 1: The middle class' antipathy towards anarchism makes our efforts more difficult. ?] [? if reformist_strength >=59: As we are not a threat tot hem, we witness an increase in reception among the middle class for our education fforts. ?]
 
@@ -41,7 +41,7 @@ We have increased our efforts to educate the middle class, but it will be hard. 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_influence += 1; resources -= 1; anarchism -= 3 if nationalism >= 51 and expropriation == 1 and anarchism =< 35; ruralmiddle_cnt += 6*(1-dissent) if expropriation == 0 and if reformist_strength >=59; reformist_strength += 10;
+on-arrival: rural_influence += 1; resources -= 1; anarchism -= 3 if nationalism >= 51 and expropriation == 1 and anarchism =< 35; ruralmiddle_cnt += 6*(1-dissent) if expropriation == 0 and if reformist_strength >=59 ; reformist_strength += 10
 
 We have tried to appeal to the rural middle class. [? if nationalism >= 51 and expropriation == 1: Our direct action against the rural owners make our efforts extremely difficult. ?] [? if expropriation == 0: As we pose no threat to the status quo, we have an easier time increasing support among the rural middle class than before. ?]
 
@@ -49,7 +49,7 @@ We have tried to appeal to the rural middle class. [? if nationalism >= 51 and e
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_influence += 2; rural_influence -= 1 if expropriation == 0; resources -= 1; rural_influence += 3 and anarchism += 1 if decentralist_adopted = 1; rural_influence += 4 if expropriation == 1; nationalism -= 1;
+on-arrival: rural_influence += 2; rural_influence -= 1 if expropriation == 0; resources -= 1; rural_influence += 3 if decentralist_adopted = 1; anarchism += 1 if decentralist_adopted = 1; rural_influence += 4 if expropriation == 1; nationalism -= 1;
 
 We have increased our education efforts among the landless rural workers. [? if expropriation == 0 and if reformist_strength >=59: Since we have moderated our rhetoric and abandoned illegalist action, the rural workers no longer trust us. ?][? if expropriation == 1: As we support their fight for land and freedom, the rural communities are more receptive to our education efforts. ?]
 
@@ -57,7 +57,7 @@ We have increased our education efforts among the landless rural workers. [? if 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: cnt_attraction += 1; cnt_attraction += 0 and nationalism += 4 if expropration >= 1; resources -= 1; cnt_attraction += 2 if reformist_strength >=59; resources -= 1; 
+on-arrival: cnt_attraction += 1; cnt_attraction += 0 if expropration >= 1; nationalism += 4 if expropration >= 1; resources -= 1; cnt_attraction += 2 if reformist_strength >= 59; resources -= 1; 
 
-We have tried to reeducate the devout catholics. [? if revolutionary_strength >= 39: The catholics despise our athiest and anti-establishment ideas. ?][? if reformist_strength >=59: Our more moderate views make us more amenable to the catholics in Spain. ?]
+We have tried to reeducate the devout catholics. [? if revolutionary_strength >= 39: The catholics despise our athiest and anti-establishment ideas. ?][? if reformist_strength >= 59: Our more moderate views make us more amenable to the catholics in Spain. ?]
 

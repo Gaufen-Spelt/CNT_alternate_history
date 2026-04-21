@@ -26,7 +26,7 @@ The Plenum is not easily convinced but the revolutionary momentum in these past 
 
 @nicetry
 title: The Plenum agrees
-view-if: revolut_points <= 5;
+view-if: revolut_points <= 5
 subtitle: This will anger the reformists considerably!
 on-arrival: fai_ties += 1; reformist_dissent += 10; revolut_points += 1; unionist_strength += 5;
 

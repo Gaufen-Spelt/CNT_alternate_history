@@ -14,7 +14,7 @@ The Defence Committee, established by members of the CNT and representatives of 
 - @arm: Use existing resources to procure weapons, for defensive purposes.
 - @infiltrate: Increase our influence among the army and the Guardia Civil.
 - @propaganda: Ramp up recruitment efforts among the more militant collectives.
-- @root
+- @root: We can't or don't want to do anything about that right now.
 
 @arm
 subtitle: We must have procured weapons first.
@@ -41,7 +41,3 @@ on-arrival: militancy += 0.1; ins_support += 1;
 With what we have, we can try to educate our comrades on tactics and inspire the more militant members to join their local defense committee.
 
 - @root
-
-
-We can't or don't want to do anything about that right now.
-

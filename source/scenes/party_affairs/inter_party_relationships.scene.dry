@@ -52,7 +52,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; psoe_relation += 8*(1-dissent); pce_relation += 6*(1-dissent)
-go-to: psoe_left if radical_wing = 1; psoe_right if moderate_wing = 1; psoe_mid if equilibrium = 1;
+go-to: psoe_left if radical_wing = 1; psoe_right if moderate_wing = 1; psoe_mid if equilibrium = 1
 
 @psoe_left
 on-arrival: resources -= 1; psoe_relation += 8*(1-dissent); pce_relation += 6*(1-dissent)

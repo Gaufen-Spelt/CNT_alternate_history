@@ -16,7 +16,7 @@ if (Q.economic_growth) {
 
 = Status
 
-[+ fortnight : fortnight +] [+ month : month +] [+ year +]
+[+ fortnight +] [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
 
@@ -69,7 +69,7 @@ Others: [+ other_r +]%
 # 1931: 0, 1933: 0,1
 [? if fet > 0 : {!<span class="tooltip-text" title="Falange Espanola">FET</span>!}: [+ fet_r +]% ?]
 
-Next election: [+ next_election_fortnight : fortnight +] [+ next_election_month : month +] [+ next_election_year +]
+Next election: [+ next_election_fortnight +] [+ next_election_month : month +] [+ next_election_year +]
 
 = Economics
 

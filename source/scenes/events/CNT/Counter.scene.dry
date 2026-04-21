@@ -31,7 +31,7 @@ The resignations were not enough to placate the Nosotros group, but they have re
 @Reform
 view-if: reform_points >= revolut_points
 subtitle: We will not be stopped by a few angry radicals.
-on-arrival: reformist_dissent -= 15; revolutionary_dissent += 15; reformist_strength += 10; n_advisors -= 1 if durruti_advisor == 1; durruti_advisor = 0; n_advisors -= 1 if ascaso_advisor == 1 ascaso_advisor
+on-arrival: reformist_dissent -= 15; revolutionary_dissent += 15; reformist_strength += 10; n_advisors -= 1 if durruti_advisor == 1; durruti_advisor = 0; n_advisors -= 1 if ascaso_advisor == 1; ascaso_advisor = 0
 
 The treintistas have enough influence and support to hold the fort, while the storm passes. Let the faistas know their usurpation attempt will not work here!
 Meanwhile, it would be wise to use Solidaridad Obrera and unleash series of theoretical essays so that we can solidify our position. Drown the anarchists with our intellectual prowess and win the masses back!

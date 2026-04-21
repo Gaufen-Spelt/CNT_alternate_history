@@ -13,7 +13,7 @@ Under the shadow of those radical demands and with a renewed revolutionary spiri
 - @peaceful: Urge for peaceful demonstration.
 - @radical: Let Barcelona see the united CNT and FAI!
 
-@peaceful:
+@peaceful
 subtitle: We are not ready to threaten the Republic yet. 
 on-arrival: reform_points += 1; radicalization -= 1; esq_relation += 5
 go-to: aftermath

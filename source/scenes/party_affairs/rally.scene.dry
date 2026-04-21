@@ -7,7 +7,7 @@ on-arrival: fortnight_actions += 1; strike_timer = 6
 card-image: img/protest.jpg
 go-to: main_strike
 
-@choose location
+@choose_location
 
 A rally is not only a demonstration in the struggle for rights, it also rallies the working class, the union and its allies. Thus it's of strategic importance where shall we summon the workers so that we can show our presence in the region.
 
@@ -20,23 +20,23 @@ A rally is not only a demonstration in the struggle for rights, it also rallies 
 - @cancel: It's not the right time.
 
 @barcelona: We rally in Barcelona, in Catalunia!
-on-arrival: barcelona += 1; if esc_in_government == 1, esc_relation -= 5; if esc_in_government == 0, esc_relation += 5; ;
+on-arrival: barcelona += 1 if esc_in_government == 1, esc_relation -= 5; if esc_in_government == 0, esc_relation += 5;
 go-to: main_strike
 
 @sevilla: We rally in Sevilla, in Andalusia!
-on-arrival: seville += 1; if psoe_in_government == 1, psoe_relation -= 5; cpe_relation -= 5;
+on-arrival: seville += 1 if psoe_in_government == 1, psoe_relation -= 5; pce_relation -= 5
 go-to: main_strike
 
 @valencia: We rally in Valencia, in Levante!
-on-arrival: valencia += 1; if psoe_in_government == 1, psoe_relation -= 5;
+on-arrival: valencia += 1 if psoe_in_government == 1, psoe_relation -= 5;
 go-to: main_strike
 
-@valencia: We rally in Oviedo, in Asturias!
-on-arrival: valencia += 1; if psoe_in_government == 1, psoe_relation -= 5;
+@asturias: We rally in Oviedo, in Asturias!
+on-arrival: asturias += 1 if psoe_in_government == 1, psoe_relation -= 5;
 go-to: main_strike
 
 @madrid: We rally in Madrid, the capital!
-on-arrival: madrid += 1; if ar_in_government == 1, ar_relation -= 5 else [? if ir_formed > 0 and ir_in_government == 1, ir_relation -= 5 ]; [if psoe_in_government == 0, psoe_relation += 5;] [if ar_in_government == 1, ar_relation -= 5 ?]
+madrid += 1; ar_relation -= 5 if ar_in_government == 1; ir_relation -= 5 if ir_formed > 0 and ir_in_government == 1; psoe_relation += 5 if psoe_in_government == 0
 
 @zaragoza: We rally in Zaragoza, in Aragon!
 on-arrival: zaragoza += 1; 
@@ -57,12 +57,12 @@ What shall we rally about? Which aspect of our struggle deserves the most attent
 @violence
 choose-if: ins_support >= 4;
 unavailable-subtitle: We are not ready for a violent riot yet and the situation does not demand it.
-on-arrival: political_urgency += 1; cnt_attraction += 3; anarchism += 1; cnt_millitancy += 0.1 if revolutionary_strength >= 50; if psoe_in_government == 1, psoe_relation -= 5; ir_relation -= 5;  esc_relation -= 5; revolutionary_strength += 5; revolutionary_dissent -= 5; nationalism += 3; if psoe_in_government == 1, socialism += 3;
+on-arrival: political_urgency += 1; cnt_attraction += 3; anarchism += 1; cnt_militancy += 0.1 if revolutionary_strength >= 50; if psoe_in_government == 1, psoe_relation -= 5; ir_relation -= 5;  esc_relation -= 5; revolutionary_strength += 5; revolutionary_dissent -= 5; nationalism += 3; if psoe_in_government == 1, socialism += 3;
 
 Peaceful protesting won't get us very far, we are ready and we know we need to fight for our rights. If the bosses and politicans won't listen to us, we will make them fear us!  [? revolutionary_strength >= 50 : Our revolutionary rhetoric matches our radical actions. ?]
 
 @classwar
-choose-if: unionist_strength <= 40;
+choose-if: unionist_strength >= 40
 unavailable-subtitle: The class struggle will be resolved in the right time, we are not ready yet.
 on-arrival: cnt_attraction += 2; cnt_attraction += 1 if socialism >= 50; anarchism -= 2 if nationalism >= 50; radicalization += 1; if psoe_in_government == 1, psoe_relation += 5; if psoe_in_government == 0, psoe_relation += 10;
 
@@ -74,7 +74,7 @@ view-if: nationalism >= 60;
 unavailable-subtitle: As troubling as the rightist rising is, there are more important battles ahead of us.
 on-arrival: cnt_attraction += 1; psoe_relation += 5; ir_relation += 5; esc_relation += 5; fascist_urgency += 2; cnt_millitancy += 0.2; radicalization += 1; fai_ties += 1; bs_millitancy += 0.1;
 
-We have learned from the German and Italian expereience and we know that only the united strength of the working class will not let them pass!
+We have learned from the German and Italian experience and we know that only the united strength of the working class will not let them pass!
 
 @support
 choose-if: reformist_strength >= 45;
@@ -85,13 +85,12 @@ on-arrival: cnt_attraction += 2; socialism += 1; psoe_relation += 5; ir_relation
 To successfully defend the working class, we must fight with those who would be receptive and amiable to their plight, even if we have to fight to save the Republic!
 
 @ugt
-choose: radical_wing == 1 and psoe_relation >= 69.9
+choose-if: radical_wing == 1 and psoe_relation >= 69.9
 view-if: strike >= 1;
 unavailable-subtitle: There is no strike right now.
 on-arrival: radicalization += 1; anarchism += 3; socialism += 2; cnt_millitancy += 0.2; political_urgency += 1; cnt_attraction += 5;
 
 The UGT and the CNT shall together march as one! Let the status quo tremble when the workers stand united!
-
 
 @non-violence
 on-arrival: if revolutionary_strength >= reformist_strength, anarchism += 1;if reformist_strength >= revolutionary_strength, cnt_attraction += 1 and anarchism -= 1; radicalization -= 1; 

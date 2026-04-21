@@ -16,20 +16,21 @@ if (Q.economic_growth) {
 
 = Status
 
-[+ fortnight : fortnight +] [+ month : month +] [+ year +] 
+[+ fortnight : fortnight +] [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
 
-State policy: [? if state_ally : Ally ?][? if state_tolerance : Tolerance - ?][? if spd_tolerance <= 0 and state_ally == 0 and state_illegal == 0 : Hostile ?][? if state_illegal : Illegal ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+State policy: [? if state_ally : Ally ?][? if state_tolerance : Tolerance ?][? if cnt_tolerance <= 0 and state_ally = 0 and state_illegal = 0 : Hostile ?][? if state_illegal : Illegal ?]
+[? if in_weimar_coalition and cnt_in_government : Weimar Coalition ?][? if in_grand_coalition and cnt_in_government : Grand Coalition ?][? if in_popular_front and cnt_in_government : Popular Front ?][? if in_left_front and cnt_in_government : Left Front ?][? if in_spd_majority and cnt_in_government : CNT majority ?][? if in_minority_government and cnt_in_government : minority government ?][? if in_emergency_government and cnt_in_government : emergency government ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if cnt_in_government and in_spd_majority = 0 and in_left_front = 0 : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if cnt_in_government and in_left_front = 1 : PCE coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if cnt_in_government and in_popular_front = 1 : PCE coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
 
 Faction dissent: [+ dissent_percent : dissent +]
 
-National Committee Sympathies: [? if natcom_reformist = 1 : Reformist?]; [? if natcom_revolutionary = 1 : Revolutionary?][? if natcom_intellectual = 1 : Intellectual?][? if natcom_unionist = 1 : Unionist?]
+National Committee Sympathies: [? if natcom_reformist = 1 : Reformist ?][? if natcom_revolutionary = 1 : Revolutionary ?][? if natcom_intellectual = 1 : Intellectual ?][? if natcom_unionist = 1 : Unionist ?]
 
 
 = Government
@@ -44,19 +45,19 @@ Cortes composition:
 
 # 1931: 24,44, 1933: 25, 1936: 22
 {!<span class="tooltip-text" title="Socialist Worker's Party of Spain">PSOE</span>!}: [+ psoe_r +]%
-# 1931: 19,15, 1933: 15, 1932: 
+# 1931: 19,15, 1933: 15
 {!<span class="tooltip-text" title="Radical Republican Party">PRR</span>!}: [+ prr_r +]%
 # 1931: 12,98, 1933: 13
 {!<span class="tooltip-text" title="Radical Republican Socialist Party">PRRS</span>!}: [+ prrs_r +]%
-# 1931: 6,17, 1933: 4 (as DstP)
-{!<span class="tooltip-text" title="Republican Left of Catalonia">>ESC</span>!}: [+ esq_r +]%
+# 1931: 6,17, 1933: 4
+{!<span class="tooltip-text" title="Republican Left of Catalonia">ESC</span>!}: [+ esq_r +]%
 # 1931: 5,55, 1933: 5
-{!<span class="tooltip-text" title="Action Republicana">!}[? if not ar_name: AR?][? if ar_name != 0 : [+ ar_name +]?]{!</span>!}: [+ ar_r +]%
-[? if ir_formed > 0: IR: [+ ir_r +]% ?]
+{!<span class="tooltip-text" title="Action Republicana">!}[? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]{!</span>!}: [+ ar_r +]%
+[? if ir_formed > 0 : IR: [+ ir_r +]% ?]
 # 1931: 5,32, 1933: 7
 {!<span class="tooltip-text" title="Liberal Republican Right">DLR</span>!}: [+ dlr_r +]%
 # 1931: 3, 1933: 5
-{!<span class="tooltip-text" title="Action Popular">!}[? if not ar_name: AP?][? if ap_name != 0 : [+ ap_name +]?]{!</span>!}: [+ ceda_r +]%
+{!<span class="tooltip-text" title="Action Popular">!}[? if ap_name = 0 : AP ?][? if ap_name <> 0 : [+ ap_name +] ?]{!</span>!}: [+ ceda_r +]%
 # 1931: 7,15, 1933: 18
 {!<span class="tooltip-text" title="Ethnic Parties">EP</span>!}: [+ ep_r +]%
 # 1931: 2,2, 1933: 18
@@ -66,31 +67,26 @@ Others: [+ other_r +]%
 # 1931: 0,5, 1933: 5
 {!<span class="tooltip-text" title="Communist Party of Spain">PCE</span>!}: [+ pce_r +]%
 # 1931: 0, 1933: 0,1
-[? if fet >0 {!<span class="tooltip-text" title="Fallange Espanola">FET</span>!}: [+ fet_r +]%
+[? if fet > 0 : {!<span class="tooltip-text" title="Falange Espanola">FET</span>!}: [+ fet_r +]% ?]
 
-
-Next election: [+ next_election_forthnight : next_election_month : month +] [+ next_election_year +]
+Next election: [+ next_election_fortnight : fortnight +] [+ next_election_month : month +] [+ next_election_year +]
 
 = Economics
 
 Inflation: [+ inflation_2 +]%
 
-[? if great_deppression_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+[? if great_depression_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
 
 Economic growth: [+ economic_growth_2 +]%
 
-
-
-# = Public Opinion
 
 @politics
 
 = Inter-party Relations
 
-
 {!<span class="tooltip-text" title="Socialist Worker's Party of Spain">PSOE</span>!}: [+ psoe_relation : relationships +]
 
-{!<span class="tooltip-text" title="Radical Republican Party>!}[? if not prr_name: PRR?][? if prr_name != 0 : [+ prr_name +]?]{!</span>!}: [+ prr_relation : relationships +]
+{!<span class="tooltip-text" title="Radical Republican Party">!}[? if prr_name = 0 : PRR ?][? if prr_name <> 0 : [+ prr_name +] ?]{!</span>!}: [+ prr_relation : relationships +]
 
 {!<span class="tooltip-text" title="Radical Republican Socialist Party">PRRS</span>!}: [+ prrs_relation : relationships +]
 
@@ -121,31 +117,31 @@ if (Q.cnt_strength) {
     Q.cnt_strength_2 = Q.cnt_strength.toFixed(1);
 }
 if (Q.jse_strength) {
-    Q.jse_strength_2 = Q.rfb_strength.toFixed(1);
+    Q.jse_strength_2 = Q.jse_strength.toFixed(1);
 }
 if (Q.bs_strength) {
-    Q.bd_strength_2 = Q.sh_strength.toFixed(1);
+    Q.bs_strength_2 = Q.bs_strength.toFixed(1);
 }
 if (Q.jsu_strength) {
-    Q.jsu_strength_2 = Q.sa_strength.toFixed(1);
+    Q.jsu_strength_2 = Q.jsu_strength.toFixed(1);
 }
 !}
 
 = Paramilitaries
 
-{!<span class="tooltip-text" title="The Joint Defense Committees are the loosely organized groups, created after the Alliance betwen CNT and FAI for the collective defense of the organizations.">Defense Committees</span>!} Strength: [+ cnt_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Joint Defense Committees are the loosely organized groups, created after the Alliance between CNT and FAI for the collective defense of the organizations.">Defense Committees</span>!} Strength: [+ cnt_strength_2 +] thousand
 
 Joint Defence Committee Preparedness: [+ cnt_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The Spanish Socialist Youth (Juventudes Socialista del Espana) is the youth wing of the Workers' Socialist Party of Spain.">JSE</span>!} Strength: [+ jse_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Spanish Socialist Youth (Juventudes Socialistas de Espana) is the youth wing of the Workers' Socialist Party of Spain.">JSE</span>!} Strength: [+ jse_strength_2 +] thousand
 
 JSE Militarization: [+ jse_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The Blue Shirts are the militants from the fascist Falanga Espanola.">Blue Shirts</span>!} Strength: [+ bs_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Blue Shirts are the militants from the fascist Falange Espanola.">Blue Shirts</span>!} Strength: [+ bs_strength_2 +] thousand
 
 Blue Shirts Militarization: [+ bs_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The United Socialist Youth>JSU</span>!} Strength: [+ jsu_strength_2 +] thousand
+{!<span class="tooltip-text" title="The United Socialist Youth">JSU</span>!} Strength: [+ jsu_strength_2 +] thousand
 
 JSU Militarization: [+ jsu_militancy : militancy +]
 
@@ -154,7 +150,7 @@ JSU Militarization: [+ jsu_militancy : militancy +]
 
 The Army: [+ army_strength +] thousand troops.
 
-Army Symptahy: [+ army_loyalty : loyalty +]
+Army Sympathy: [+ army_loyalty : loyalty +]
 
 Catalonian police: [+ catalonian_police_strength +] thousand members.
 
@@ -167,7 +163,8 @@ on-arrival: {!
 Q.pro_republic_disp = Math.round(Q.pro_republic);
 Q.nationalism_disp = Math.round(Q.nationalism);
 Q.socialism_disp = Math.round(Q.socialism);
-Q.anarchism_disp = math.round(Q.anarchism);
+Q.anarchism_disp = Math.round(Q.anarchism);
+Q.pro_anarchy_disp = Q.anarchism_disp;
 !}
 
 = Projected election results
@@ -176,41 +173,40 @@ Q.anarchism_disp = math.round(Q.anarchism);
 
 PSOE: [+ psoe_votes +]%
 
-[? if ir_formed: IR: [+ irvotes +]% ?]
+[? if ir_formed > 0 : IR: [+ ir_votes +]% ?]
 
 PRR: [+ prr_votes +]%
 
 PRRS: [+ prrs_votes +]%
 
-[? if not ar_name: AR?][? if ar_name != 0 : [+ ar_name +]?]: [+ ar_votes +]%
+[? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]: [+ ar_votes +]%
 
 ESQ: [+ esq_votes +]%
 
 DLR: [+ dlr_votes +]%
 
-AP: [+ap_votes +]%
+AP: [+ ap_votes +]%
 
-CL: [+cl_votes +]%
+CL: [+ cl_votes +]%
 
-EP: [+ep_votes +]%
+EP: [+ ep_votes +]%
 
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_display +]%, PRR: [+ workers_prr_display +]%, IR: [+ workers_ir_display +]%, [? if not ar_name: AR?][? if ar_name != 0 : [+ ar_name +]?]: [+ workers_ar_display +]%, prrs: [+ workers_prrs_display +]%; ESC: [+ workers_esc_display +]%, DLR: [+ workers_dlr_display +]%, EP: [+ workers_ep_display +]%, AP: [+ workers_ap_display +]%, Others: [+ workers_other_display +]%, 
+Workers: PSOE: [+ workers_psoe_display +]%, PRR: [+ workers_prr_display +]%, IR: [+ workers_ir_display +]%, [? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]: [+ workers_ar_display +]%, PRRS: [+ workers_prrs_display +]%, ESC: [+ workers_esc_display +]%, DLR: [+ workers_dlr_display +]%, EP: [+ workers_ep_display +]%, AP: [+ workers_ap_display +]%, Others: [+ workers_other_display +]%
 
-Middle Class: PSOE: [+ middle_psoe_display +]%, PRR: [+ middle_prr_display +]%, IR: [+ middle_ir_display +]%, [? if not ar_name: AR?][? if ar_name != 0 : [+ ar_name +]?]: [+ middle_ar_display +]%, prrs: [+ middle_prrs_display +]%; ESC: [+ middle_esc_display +]%, DLR: [+ middle_dlr_display +]%, EP: [+ middle_ep_display +]%, AP: [+ middle_ap_display +]%, Others: [+ middle_other_display +]%
+Middle Class: PSOE: [+ middle_psoe_display +]%, PRR: [+ middle_prr_display +]%, IR: [+ middle_ir_display +]%, [? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]: [+ middle_ar_display +]%, PRRS: [+ middle_prrs_display +]%, ESC: [+ middle_esc_display +]%, DLR: [+ middle_dlr_display +]%, EP: [+ middle_ep_display +]%, AP: [+ middle_ap_display +]%, Others: [+ middle_other_display +]%
 
-Rural Middle Class: PSOE: [+ rural_middle_psoe_display +]%, PRR: [+ rural_middle_prr_display +]%, IR: [+ rural_middle_ir_display +]%, [? if not ar_name: AR?][? if ar_name != 0 : [+ ar_name +]?]: [+ rural_middle_ar_display +]%, prrs: [+ rural_middle_prrs_display +]%; ESC: [+ rural_middle_esc_display +]%, DLR: [+ rural_middle_dlr_display +]%, EP: [+ rural_middle_ep_display +]%, AP: [+ rural_middle_ap_display +]%, Others: [+ rural_middle_other_display +]%
+Rural Middle Class: PSOE: [+ rural_middle_psoe_display +]%, PRR: [+ rural_middle_prr_display +]%, IR: [+ rural_middle_ir_display +]%, [? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]: [+ rural_middle_ar_display +]%, PRRS: [+ rural_middle_prrs_display +]%, ESC: [+ rural_middle_esc_display +]%, DLR: [+ rural_middle_dlr_display +]%, EP: [+ rural_middle_ep_display +]%, AP: [+ rural_middle_ap_display +]%, Others: [+ rural_middle_other_display +]%
 
-Rural Workers: PSOE: [+ rural_psoe_display +]%, PRR: [+ rural_prr_display +]%, IR: [+ rural_ir_display +]%, [? if not ar_name: AR?][? if ar_name != 0 : [+ ar_name +]?]: [+ rural_ar_display +]%, prrs: [+ rural_prrs_display +]%; ESC: [+ rural_esc_display +]%, DLR: [+ rural_dlr_display +]%, EP: [+ rural_ep_display +]%, AP: [+ rural_ap_display +]%, Others: [+ rural_other_display +]%
+Rural Workers: PSOE: [+ rural_psoe_display +]%, PRR: [+ rural_prr_display +]%, IR: [+ rural_ir_display +]%, [? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]: [+ rural_ar_display +]%, PRRS: [+ rural_prrs_display +]%, ESC: [+ rural_esc_display +]%, DLR: [+ rural_dlr_display +]%, EP: [+ rural_ep_display +]%, AP: [+ rural_ap_display +]%, Others: [+ rural_other_display +]%
 
-Rural Workers: PSOE: [+ unemployed_psoe_display +]%, PRR: [+ unemployed_prr_display +]%, IR: [+ unemployed_ir_display +]%, [? if not ar_name: AR?][? if ar_name != 0 : [+ ar_name +]?]: [+ unemployed_ar_display +]%, prrs: [+ unemployed_prrs_display +]%; ESC: [+ unemployed_esc_display +]%, DLR: [+ unemployed_dlr_display +]%, EP: [+ unemployed_ep_display +]%, AP: [+ unemployed_ap_display +]%, Others: [+ unemployed_other_display +]%
+Unemployed: PSOE: [+ unemployed_psoe_display +]%, PRR: [+ unemployed_prr_display +]%, IR: [+ unemployed_ir_display +]%, [? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]: [+ unemployed_ar_display +]%, PRRS: [+ unemployed_prrs_display +]%, ESC: [+ unemployed_esc_display +]%, DLR: [+ unemployed_dlr_display +]%, EP: [+ unemployed_ep_display +]%, AP: [+ unemployed_ap_display +]%, Others: [+ unemployed_other_display +]%
 
-Catholics: PSOE: [+ catholics_psoe_display +]%, PRR: [+ catholics_prr_display +]%, IR: [+ catholics_ir_display +]%, [? if not ar_name: AR?][? if ar_name != 0 : [+ ar_name +]?]: [+ catholics_ar_display +]%, prrs: [+ catholics_prrs_display +]%; ESC: [+ catholics_esc_display +]%, DLR: [+ catholics_dlr_display +]%, EP: [+ catholics_ep_display +]%, AP: [+ catholics_ap_display +]%, Others: [+ catholics_other_display +]%
+Catholics: PSOE: [+ catholics_psoe_display +]%, PRR: [+ catholics_prr_display +]%, IR: [+ catholics_ir_display +]%, [? if ar_name = 0 : AR ?][? if ar_name <> 0 : [+ ar_name +] ?]: [+ catholics_ar_display +]%, PRRS: [+ catholics_prrs_display +]%, ESC: [+ catholics_esc_display +]%, DLR: [+ catholics_dlr_display +]%, EP: [+ catholics_ep_display +]%, AP: [+ catholics_ap_display +]%, Others: [+ catholics_other_display +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
 
-Support for Anarchism [+ pro_anarchy_disp +]%
-
+Support for Anarchism: [+ pro_anarchy_disp +]%

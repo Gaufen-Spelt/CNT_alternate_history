@@ -20,19 +20,19 @@ A rally is not only a demonstration in the struggle for rights, it also rallies 
 - @root: It's not the right time.
 
 @barcelona
-on-arrival: barcelona += 1 if esc_in_government == 1, esc_relation -= 5; if esc_in_government == 0, esc_relation += 5;
+on-arrival: barcelona += 1 if esc_in_government == 1; esc_relation -= 5 if esc_in_government == 0; esc_relation += 5;
 go-to:main_rally
 
 @sevilla
-on-arrival: seville += 1 if psoe_in_government == 1, psoe_relation -= 5; pce_relation -= 5
+on-arrival: seville += 1 if psoe_in_government == 1; psoe_relation -= 5; pce_relation -= 5
 go-to:main_rally
 
 @valencia
-on-arrival: valencia += 1 if psoe_in_government == 1, psoe_relation -= 5;
+on-arrival: valencia += 1 if psoe_in_government == 1; psoe_relation -= 5;
 go-to:main_rally
 
 @asturias
-on-arrival: asturias += 1 if psoe_in_government == 1, psoe_relation -= 5;
+on-arrival: asturias += 1 if psoe_in_government == 1; psoe_relation -= 5;
 go-to:main_rally
 
 @madrid

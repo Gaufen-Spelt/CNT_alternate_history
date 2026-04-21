@@ -25,7 +25,7 @@ The CNT, being deemed as an anarchist union, is viewed with varied degrees of su
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; prr_relation += 5*(1-dissent); dlr += 5*(1-dissent)
+on-arrival: resources -= 1; prr_relation += 5*(1-dissent); dlr_relation += 5*(1-dissent)
 
 The moderate centrists of the Partido Republicano Radical   and Derecha Liberal Republicano are maybe not the best ally we can use, but shutting their critique up may prove useful in the long run.
 
@@ -47,7 +47,7 @@ on-arrival: resources -= 1; ir_relation += 8*(1-dissent)
 
 The Popular Front and the Izquierda Republicana have had enough of the right-wing's disastrous policies. Now is the time to negotiate common actions together.
 
-- @left
+@left
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
@@ -62,7 +62,7 @@ Under Largo Caballero's leadership the Partido Obrero Socialista is more radical
 @psoe_right
 on-arrival: resources -= 1; psoe_relation += 6*(1-dissent); pce_relation += 6*(1-dissent)
 
-With Indalecio Prieto as a party leader, the Partido Obrero Socialista and the UGT is moderating their rhetoric and actions. This makes warming up to them harder, even though they are still the most radical party on the Left right now. T
+With Indalecio Prieto as a party leader, the Partido Obrero Socialista and the UGT is moderating their rhetoric and actions. This makes warming up to them harder, even though they are still the most radical party on the Left right now.
 
 @psoe_mid
 on-arrival: resources -= 1; psoe_relation += 7*(1-dissent); pce_relation += 6*(1-dissent)

@@ -86,7 +86,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Socialist Worker's Party of Spain">PSOE</span>!}: [+ psoe_relation : relationships +]
 
-{!<span class="tooltip-text" title="Radical Republican Party">!}[? if prr_name = 0 : PRR ?][? if prr_name <> 0 : [+ prr_name +] ?]{!</span>!}: [+ prr_relation : relationships +]
+{!<span class="tooltip-text" title="Radical Republican Party">!}[? if prr_name = 0 : PRR ?][? if prr_name != 0 : [+ prr_name +] ?]{!</span>!}: [+ prr_relation : relationships +]
 
 {!<span class="tooltip-text" title="Radical Republican Socialist Party">PRRS</span>!}: [+ prrs_relation : relationships +]
 

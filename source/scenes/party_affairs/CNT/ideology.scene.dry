@@ -2,7 +2,7 @@ title: Questions of Ideology
 new-page: true
 is-card: true
 tags: union_affairs
-view-if: ideology_timer = 0
+view-if: ideology_timer =< 0
 on-arrival: month_actions += 1; old_ideology = ideology; ideology_timer = 18
 card-image: img/arbeiterbew.jpg
 max-visits: 3
@@ -14,13 +14,13 @@ The CNT is torn between different ideological currents. What should be our prima
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
+[? if intellectual > 0 : Working people should trust the theroretical and doctrinal authority of the anarchists on the matter of struggle. ?]
+
 - @revolution: The workers' struggle is just a part of the fight against the oppression of the state.
 - @unionist: We should fight for the workers, but let the anarchist spirit create the conditions for the final struggle.
 - @reformist: We shall keep the union apolitical, our only struggle should be for worker's rights.
-
-- @discard
-
-[? if intellectual > 0 : @intellectual: Working people should trust the theroretical and doctrinal authority of the anarchists on the matter of struggle. ?]
+- @intellectual: Working people should trust the theroretical and doctrinal authority of the anarchists on the matter of struggle.
+- @easy_discard
 
 @revolution
 on-arrival: {!
@@ -29,7 +29,7 @@ if (Q.ideology && Q.ideology != "revolutionary") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "revolutionary"; revolutionary_strength += 10; socialist_coalition -==  1; revolutionary_dissent -= 5; prr_relation -= 3; fai_ties +=1; psoe_relation -= 2; reformist_dissent -= 5; ins_support += 1; radicalization += 1
+on-departure: ideology = "revolutionary"; revolutionary_strength += 10; socialist_coalition -= 1; revolutionary_dissent -= 5; prr_relation -= 3; fai_ties +=1; psoe_relation -= 2; reformist_dissent -= 5; ins_support += 1; radicalization += 1
 
 The anarchist wing of the union supports the armed struggle against the state and its oppressive institutions as its main goal and favors an anarchist free federation.
 
@@ -51,11 +51,12 @@ if (Q.ideology && Q.ideology != "reformist") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "reformist"; reformist_strength += 10; wtb_support += 1; reformist_dissent -= 5; fai_relation -= 1; prr_relation += 2; socialist_coalition += 1; radicalization -= 1
+on-departure: ideology = "reformist"; reformist_strength += 10; wtb_support += 1; reformist_dissent -= 5; fai_ties -= 1; prr_relation += 2; socialist_coalition += 1; radicalization -= 1
 
 The reformist union leaders support cooperation with the republican forces in order to provide benefits to the workers, while claiming that a union should be apolitical in terms of ideology.
 
 @intellectual
+view-if: intellectual > 0
 on-arrival: {!
 if (Q.ideology && Q.ideology != "intellectual") {
     Q.changed = 1;

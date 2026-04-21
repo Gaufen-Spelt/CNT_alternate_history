@@ -19,5 +19,6 @@ Despite fierce opposition from some of the more moderate members of the Federati
 @interesting
 title: This will cause some ripples
 subtitle: Only time will tell if the Trabazon will survive.
-on-arrival: if revolutionary_strength >= 30, fai_ties += 1; if reformist_strength >= 35, fai_ties -= 1;
+on-arrival: fai_ties += 1 if revolutionary_strength >= 30; fai_ties -= 1 if reformist_strength >= 35;
+
 The alliance is more fragile than ever. The coming weeks will be fateful to the survival of both organisations.

@@ -60,7 +60,7 @@ Q.revolutionary_strength = 20;
 Q.revolutionary_dissent = 15;
 
 Q.intellectual_strength = 10;
-Q.intellectual_dissent =15;
+Q.intellectual_dissent = 15;
 
 // secret events...
 
@@ -69,7 +69,7 @@ Q.revolutionary_leave = 0;
 Q.unionist_resign = 0;
 Q.intellectual_split = 0;
 
-// have the intelelctuals formed?
+// have the intellectuals formed?
 Q.intellectual = 1;
 
 // crisis_urgency indicates how seriously the CNT is taking the political crisis - scale from 0 to 10.
@@ -83,15 +83,15 @@ Q.fai_ties = 2;
 // Support for restructuring of the union for a more disciplined framework - 1 to 10.
 Q.centralization_support = 0;
 Q.natcom_control = 1;
-Q.expropriation = 0
+Q.expropriation = 0;
 
 // Support for the insurrectionary plan
 Q.ins_support = 1;
 Q.ins_res = 0; //funds for the armament of an insurrection//
-// Support for a socailist collaboration relative to 1931
+// Support for a socialist collaboration relative to 1931
 Q.socialist_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
-// 1 - Centralist plan, 2 - Decentralist plan, 3 - Reformist plan 
+// 1 - Centralist plan, 2 - Decentralist plan, 3 - Reformist plan
 Q.economic_plan = 0;
 // have we formed the united front?
 Q.united_front_formed = 0;
@@ -106,26 +106,24 @@ Q.reform_points = 0;
 Q.revolut_points = 0;
 Q.NIF = 0;
 
-
 // support for centralist plan
-Q.centalist_support = 0;
-Q.centalist_adopted = 0;
+Q.centralist_support = 0;
+Q.centralist_adopted = 0;
 // moderate economic plan
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
 Q.decentralist_support = 0;
 Q.decentralist_adopted = 0;
-Q.feminism == 0;
-Q.strike == 0;
+Q.feminism = 0;
+Q.strike = 0;
 
 //Local support
-
-Q.seville == 0
-Q.barcelona == 1
-Q.valencia == 0
-Q.asturias == 0
-Q.madrid == 0
-Q.zaragoza == 1
+Q.seville = 0;
+Q.barcelona = 1;
+Q.valencia = 0;
+Q.asturias = 0;
+Q.madrid = 0;
+Q.zaragoza = 1;
 
 // organizations
 
@@ -146,10 +144,10 @@ Q.fet_relation = 0;
 Q.psoe_leader = "Besteiro";
 // after him, Prieto or Caballero take over
 Q.psoe_party_leader = "Besteiro";
-Q.radical_wing == 0;
-Q.moderate_wing == 0;
-Q.equilibrium == 1;
-//could be Largo Caballero or Indalecio Prieto, later - Juan Negrin after the divison in 1937//
+Q.radical_wing = 0;
+Q.moderate_wing = 0;
+Q.equilibrium = 1;
+//could be Largo Caballero or Indalecio Prieto, later - Juan Negrin after the division in 1937//
 Q.prr_leader = "Lerroux";
 Q.prrs_leader = "Domingo";
 Q.esc_leader = "Macia";
@@ -162,22 +160,20 @@ Q.hindenburg_relation = 25;
 Q.hindenburg_enabled = 0;
 
 //National Committee
-Q.natcom_reformist= 1;
-Q.natcom_rev == 0;
-Q.natcom.intellectual == 0;
+Q.natcom_reformist = 1;
+Q.natcom_rev = 0;
+Q.natcom_intellectual = 0;
 
 // Does the CNT control in Catalonia?
 Q.cnt_catalonia = 0;
 // Options: esq, lc
-Q.catlonia_government = "esq";
-
+Q.catalonia_government = "esq";
 
 // The array of forces - paramilitary groups
 // Number of members in 1931 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
 Q.cnt_strength = 1000;
 Q.cnt_militancy = 0.2;
-Q.mujeres.libres = 0;
+Q.mujeres_libres = 0;
 Q.cnt_banned = 0;
 Q.bs_strength = 500;
 Q.bs = 0;
@@ -204,7 +200,7 @@ Q.army_loyalty = 0.2;
 
 // popular opinion
 Q.cnt_attraction = 0;
-Q.rural_influence =0;
+Q.rural_influence = 0;
 // national ideology - on a binary scale
 // Nationalism vs. Internationalism
 Q.nationalism = 30;
@@ -213,7 +209,7 @@ Q.socialism = 30;
 Q.anarchism = 10;
 // pro-republic vs pro-monarchy
 Q.pro_republic = 70;
-Q.popular_front =0;
+Q.popular_front = 0;
 
 Q.emergency_rule = 1;
 
@@ -230,39 +226,29 @@ Q.constitutional_protection = 0;
 Q.cpe_banned = 0;
 Q.fet_banned = 0;
 
-// coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
-// when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
+// coups and capital strikes happen when you upset the right or the capitalists too much with your policies.
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
-
 
 Q.budget = 4;
 
 // Proportion of different social groups
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.workers = 50; // industry and trade
-Q.rural_middle = 5; // 
-Q.rural = 45; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 0,3;
+Q.workers = 50;
+Q.rural_middle = 5;
+Q.rural = 45;
+Q.unemployed = 0.3;
 Q.catholics = 30;
 
-// unemployment: 1931 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
-
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
 Q.income = 1600;
-// what about incomes for different classes? rural workers? middle-class workers?
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 2.9;
 
-// economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = 4.4;
 
 // economic expansion timer
 Q.economic_expansion = 0;
 
-// quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
+// quality of life (as % of 1928 - currently unused)
 Q.workers_qol = 100;
 Q.rural_qol = 100;
 Q.unemployed_qol = 100;
@@ -272,11 +258,9 @@ Q.new_middle_qol = 100;
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
-// TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 60;
 Q.workers_kpd = 20;
 Q.workers_z = 5;
@@ -289,7 +273,7 @@ Q.workers_other = 10;
 Q.old_middle_spd = 5;
 Q.old_middle_kpd = 0;
 Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
+Q.old_middle_ddp = 10;
 Q.old_middle_dvp = 25;
 Q.old_middle_dnvp = 25;
 Q.old_middle_nsdap = 10;
@@ -298,7 +282,7 @@ Q.old_middle_other = 10;
 Q.new_middle_spd = 5;
 Q.new_middle_kpd = 1;
 Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
+Q.new_middle_ddp = 25;
 Q.new_middle_dvp = 25;
 Q.new_middle_dnvp = 10;
 Q.new_middle_nsdap = 5;
@@ -307,7 +291,7 @@ Q.new_middle_other = 15;
 Q.rural_spd = 10;
 Q.rural_kpd = 0;
 Q.rural_z = 5;
-Q.rural_ddp= 5;
+Q.rural_ddp = 5;
 Q.rural_dvp = 15;
 Q.rural_dnvp = 45;
 Q.rural_nsdap = 5;
@@ -331,13 +315,7 @@ Q.catholics_dnvp = 5;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 12;
 
-
 // Current Reichstag composition
-// % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
 Q.spd_r = 26;
 Q.kpd_r = 9;
 Q.z_r = 17;
@@ -347,7 +325,6 @@ Q.dnvp_r = 20;
 Q.nsdap_r = 3;
 Q.other_r = 9;
 
-// diff from prev
 Q.old_spd_r = 26;
 Q.old_kpd_r = 9;
 Q.old_z_r = 17;
@@ -357,26 +334,20 @@ Q.old_dnvp_r = 20;
 Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
 
-// sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
-// for changing the DDP's name to the DStP
 Q.ddp_name = "DDP";
 
-// array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
-// party support records for every month
 Q.party_support_records = [];
-// inflation and unemployment records
 Q.economic_records = [];
 
 //State of Catalonia
-Q.president_catalonia = "integrated"
+Q.president_catalonia = "integrated";
 
 // State of the government
 Q.president = "King Alfonso XIII";
-// starting PM
 Q.pm = "Berenguer";
 Q.pm_party = 'other';
 Q.psoe_in_government = 0;
@@ -391,37 +362,23 @@ Q.lc_in_government = 0;
 Q.ir_in_government = 0;
 
 Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
 Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
 Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
 Q.in_spd_majority = 0;
 Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
 Q.in_minority_government = 0;
-// national unity governmet
 
-// if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
 Q.kpd_coalition_dissent = 0;
 
-// does the SPD tolerate the government even if it is not a participant?
 Q.spd_toleration = 0;
 
-// is the current government a presidential minority government?
 Q.minority_government = 0;
 
-// ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
-// is the agricultural ministry useful at all?
+// ministries
 Q.foreign_minister = 'Streseman';
 Q.foreign_minister_party = 'DVP';
 Q.interior_minister = 'von Keudell';
@@ -444,41 +401,27 @@ Q.panzerkreuzer_seen = 0;
 Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
 Q.unemployment_insurance_seen = 0;
-// unemployment insurance event is seen if the unemployment level is at least 4 more than the threshold...
 Q.unemployment_insurance_threshold = 10;
 Q.blutmai = 0;
 
-// have we reformed these institutions to be more democratic?
+// institutional reforms
 Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
 Q.military_reform = 0;
 Q.womens_rights = 0;
-// level of welfare relative to 1928 (can go negative)
 Q.welfare = 0;
-// level of support for farmers
 Q.land_reform = 0;
-// works-creation programs (i.e. PW -Public works - Indalecio Prieto's public works plan) - how much have they implemented?
 Q.pw_implemented = 0;
-// Relations with the Western countries (France, UK).
 Q.west_relation = 0;
-// Relations with the Eastern countries (Poland, Czechoslovakia)
 Q.east_relation = 0;
-// Relations with the Soviet n
 Q.soviet_relation = 0;
-// How much have we exposed the secret rearmament programs?
 Q.rearmament_exposed = 0;
-// nationalization_progress is part of the left economic plan.
 Q.nationalization_progress = 0;
-// socializations is part of the economic democracy card.
 Q.socializations = 0;
-// have there been any factory takeovers?
 Q.factory_takeovers = 0;
-// progress on the moderate economic plan
 Q.moderate_plan_progress = 0;
-// Iberian Federation negotiation process
 Q.ibf = 0;
 Q.ibf_progress = 0;
-// science/education
 Q.science = 0;
 Q.education_science = 0;
 
@@ -489,29 +432,21 @@ Q.tariffs = 0;
 
 Q.electoral_threshold = 0;
 
-// our conduct in the government, and the conduct of our coalition opponents.
-// did the SPD vote against the previous government in a vote of no confidence?
 Q.spd_no_confidence = 0;
-// was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
 Q.no_confidence_against_spd = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 3;
-// timer - this decrements by 1 every turn, and is set to 5 whenever an advisor action is used, so that you can only use one advisor action every 5 months.
-// let's just put all of the timers here...
-// most party affairs and government affairs cards are on a timer.
+
 Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
-            ,'fundraising', 'ideology', 'streetfighting', 'education', 'rally', 'agri_situation', 'inter_party_relationships',
-
-
-            , 'international_relations',
+            'fundraising', 'ideology', 'streetfighting', 'education', 'rally', 'agri_situation', 'inter_party_relationships',
+            'international_relations',
             'popular_front', 'media', 'enemies',
-            'party_organizations', 'rally', 
-            , peoples_party',
+            'party_organizations', 'rally',
+            'peoples_party',
             'party_disunity',
-            'shuffle_leadership'
-            // FAI
-            'fai_ties', 'feminism','defcom',
+            'shuffle_leadership',
+            'fai_ties', 'feminism', 'defcom',
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
             'police', 'catalan_affairs', 'shuffle_cabinet', 'social_welfare',
@@ -520,14 +455,13 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'dealing_with_toleration',
             'constitutional_reform', 'labor_rights',
             'education_science', 'curriculum',
-            // events
             'emergency_cuts', 'unemployment_insurance',
             'sa_ban', 'sh_ban', 'papen_chancellor',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
             'understanding_enemy', 'schleichers_schemes'];
+
 Q.advisor_action_timer = 0;
-// Union affairs timers
 Q.confronting_fascists_timer = 0;
 Q.econ_program_timer = 0;
 Q.fundraising_timer = 0;
@@ -537,26 +471,25 @@ Q.international_relations_timer = 0;
 Q.popular_front_timer = 0;
 Q.media_timer = 0;
 Q.enemies_timer = 0;
-Q.party_organizations_timer =  0;
+Q.party_organizations_timer = 0;
 Q.rally_timer = 0;
 Q.revolution_timer = 0;
 Q.shuffle_leadership_timer = 0;
 Q.streetfighting_timer = 0;
-Q.education.timer = 0;
-Q.agri_situation = 0;
-// n_elections is the number of elections that have happened since the start of the game.
+Q.education_timer = 0;
+Q.agri_situation_timer = 0;
+
 Q.n_elections = 0;
-// number of elections without a clear majority.
 Q.no_majority_elections = 0;
-// elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 0;
 Q.next_election_year = 1931;
-Q.next_election_month = n/a;
-Q.next_election_fortnight = n/a;
-Q.next_election_time = n/a;
+Q.next_election_month = null;
+Q.next_election_fortnight = null;
+Q.next_election_time = null;
+
 // FAI affairs timers
 Q.defcom_timer = 0;
-Q.fai_ties.timer = 0;
+Q.fai_ties_timer = 0;
 Q.agricultural_policy_timer = 0;
 Q.domestic_enemies_timer = 0;
 Q.economic_policy_timer = 0;
@@ -574,10 +507,8 @@ Q.womens_rights_timer = 0;
 Q.homosexual_rights_timer = 0;
 Q.economic_democracy_timer = 0;
 Q.coalition_affairs_timer = 0;
+
 // event timers
-
-
-
 Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
 Q.sa_ban_timer = 0;
@@ -585,36 +516,35 @@ Q.sh_ban_timer = 0;
 Q.kpd_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
-
-// Peiro and Sanchez are unionists
-Q.pestana_advisor = 1; // Angel Pestana
+// Advisors
+Q.pestana_advisor = 1;
 Q.pestana_left = 0;
-Q.peiro_advisor = 1; // Joan Peiro
-Q.sanchez_advisor = 1; // Juan Lopez Sanchez
+Q.peiro_advisor = 1;
+Q.sanchez_advisor = 1;
 
 // Reformist alternate advisors
-Q.arin_advisor = 0; // Francesc Arin
-Q.segui_advisor = 0; // Salvador Segui
+Q.arin_advisor = 0;
+Q.segui_advisor = 0;
 
 // Unionist alternate advisors
-Q.progreso_advisor = 0; // Progresso Alfarache
+Q.progreso_advisor = 0;
 
-//  Revolutionary advisors
-Q.durruti_advisor = 0; // Buenaventura Durruti
-Q.ascaso_advisor = 0; // Francisco Ascaso
-Q.oliver_advisor = 0; // Juan Garcia Oliver
-
+// Revolutionary advisors
+Q.durruti_advisor = 0;
+Q.ascaso_advisor = 0;
+Q.oliver_advisor = 0;
 
 // Intellectual advisors
-Q.santillan_advisor = 0; // Diego Abad de Santillan
-Q.montseny_advisor = 0; // Federica Montseny (post 1933)
-Q.mvazquez_advisor = 0; // Mariano Vazquez
+Q.santillan_advisor = 0;
+Q.montseny_advisor = 0;
+Q.mvazquez_advisor = 0;
 
 // Nonfactional advisors
-Q.rodriguez_advisor = 0; // Melchior Rodriguez
-Q.puente_advisor = 0; // Isaac Puente
-Q.urales_advisor = 0; // Federico Urales
+Q.rodriguez_advisor = 0;
+Q.puente_advisor = 0;
+Q.urales_advisor = 0;
 !}
+
 set-bg: img/map_2.jpg
 new-page: true
 
